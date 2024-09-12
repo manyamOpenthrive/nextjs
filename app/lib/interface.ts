@@ -9,7 +9,7 @@ export interface simpleBlogCard {
 }
 
 export interface card {
-  imageurl: Image; // Assuming imageurl is a Sanity image object.
+  imageurl: string; // Assuming imageurl is a Sanity image object.
   title: string;
   shortdesc: string;
   slug: string;
