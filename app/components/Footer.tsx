@@ -1,106 +1,69 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 function Footer() {
     return (
+        <footer className="bg-black text-gray-300">
+            <div className="mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    {/* Logo and Description */}
+                    <div className="col-span-1">
+                        <h1 className="text-white text-3xl font-semibold mb-4">
+                            Cx<span className="text-red-600">ful</span>
+                        </h1>
+                        <p className="text-gray-400 text-sm">
+                            Website design & development that interacts & connects with your prospects and customers just like you would do if in your office & store.
+                            Design & development that interacts & connects with your prospects and customers just like you would do if in your office & store.
+                        </p>
+                    </div>
 
+                    {/* Important Links */}
+                    <div className="col-span-1">
+                        <h2 className="mb-6 text-lg font-semibold text-white">Important Links</h2>
+                        <ul className="text-gray-400 space-y-4">
+                            <li><Link href="/">Services</Link></li>
+                            <li><Link href="/">Work</Link></li>
+                            <li><Link href="/">Insights</Link></li>
+                            <li><Link href="/">About</Link></li>
+                            <li><Link href="/">Get In Touch</Link></li>
+                        </ul>
+                    </div>
 
-        <footer className="bg-white dark:bg-gray-300">
-            <div className="mx-auto w-full max-w-screen-xl">
-                <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-                    <div>
-                        <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-                        <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                            <li className="mb-4">
-                                <a href="#" className=" hover:underline">About</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Careers</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Brand Center</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Blog</a>
-                            </li>
-                        </ul>
+                    {/* Contact Information */}
+                    <div className="col-span-1">
+                        <h2 className="mb-6 text-lg font-semibold text-white">Contact Us</h2>
+                        <p className="text-gray-400">
+                            Cxful, Subsidiary of<br />
+                            Openthrive Service Pvt. Ltd.<br />
+                            Sahakar Nagar, Bangalore<br />
+                            India, 560092
+                        </p>
                     </div>
-                    <div>
-                        <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
-                        <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Discord Server</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Twitter</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Facebook</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                        <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Privacy Policy</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Licensing</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Terms &amp; Conditions</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
-                        <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">iOS</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Android</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">Windows</a>
-                            </li>
-                            <li className="mb-4">
-                                <a href="#" className="hover:underline">MacOS</a>
-                            </li>
+
+                    {/* Openthrive Links */}
+                    <div className="col-span-1">
+                        <h2 className="mb-6 text-lg font-semibold text-white">Openthrive</h2>
+                        <ul className="text-gray-400 space-y-4">
+                            <li><Link href="/">Home</Link></li>
+                            <li><Link href="/">About</Link></li>
+                            <li><Link href="/">Insider</Link></li>
                         </ul>
                     </div>
                 </div>
-                <div className="px-4 py-6 bg-gray-100 dark:bg-gray-300 md:flex md:items-center md:justify-between">
-                    <span className="text-sm text-gray-500 dark:text-gray-900 sm:text-center">© 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
-                    </span>
-                    <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-                        <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
 
-                            <span className="sr-only">Facebook page</span>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-
-                            <span className="sr-only">Discord community</span>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-
-                            <span className="sr-only">Twitter page</span>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                            <span className="sr-only">GitHub account</span>
-                        </a>
-                        <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
-                            <span className="sr-only">Dribbble account</span>
-                        </a>
+                {/* Footer Bottom Section */}
+                <div className="mt-8 flex justify-between items-center   pt-6">
+                    <p className="text-gray-400 text-sm">
+                        Copy Right 2023. Cxful & Openthrive
+                    </p>
+                    <div className="flex space-x-6">
+                        <Link href="/" className="text-gray-400">Privacy Policy</Link>
+                        <Link href="/" className="text-gray-400 ">Terms Of Services</Link>
                     </div>
                 </div>
             </div>
         </footer>
-
-    )
+    );
 }
 
-export default Footer
+export default Footer;
