@@ -24,7 +24,7 @@ export default async function Home() {
           <p className="font-semibold">Resouces</p>
           <h1 className="font-semibold text-5xl">CX Insights</h1>
         </span>
-        <ul className="flex flex-1 gap-4 justify-end items-end ">
+        <ul className="hidden md:flex flex-1 gap-4 justify-end items-end ">
           <li>All</li>
           <li>Website</li>
           <li>eCommerce</li>

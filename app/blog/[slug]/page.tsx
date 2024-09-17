@@ -22,6 +22,7 @@ async function BlogPage({ params }: { params: { slug: string } }) {
 
     return (
         <div className="w-full">
+            {/* Full-width Title Image */}
             <div className="relative w-full overflow-hidden">
                 <Image
                     src={urlFor(data.titleImage).url()}
@@ -31,28 +32,33 @@ async function BlogPage({ params }: { params: { slug: string } }) {
                     priority
                     className="w-full h-auto object-cover"
                 />
-                <div className="absolute bottom-0 z-10 p-8 text-white pb-32">
-                    <p className="text-lg">Website</p>
-                    <h1 className="text-8xl font-bold sm:text-4xl">
+                {/* Text Overlay - Positioned at bottom left */}
+                <div className="absolute bottom-0 z-10 p-4 md:p-8 text-white pb-16 md:pb-32">
+                    <p className="text-sm md:text-lg">Website</p>
+                    <h1 className="text-2xl md:text-3xl lg:text-8xl font-bold">
                         {data.title}
                     </h1>
-                    <p className="text-lg mt-2">Author • Oct 25, 2024</p>
+                    <p className="text-sm md:text-lg mt-2">Author • Oct 25, 2024</p>
                 </div>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 lg:grid-cols-5 gap-10 max-w-[1300px] m-64 sm:px-7">
-                <aside className="lg:col-span-1">
-                    <div className="top-24 ">
+            {/* Responsive Layout for Table of Content and Blog Content */}
+            <div className="mt-16 grid grid-cols-1 lg:grid-cols-5 gap-10 max-w-[1300px] mx-auto px-4 md:px-8 lg:px-16">
+                {/* Table of Contents - Sidebar on large screens */}
+                <aside className="lg:col-span-1 mb-8 lg:mb-0">
+                    <div className="top-24">
                         <h2 className="text-lg font-bold mb-2">Table Of Content</h2>
                         <ul className="space-y-2">
-                            <li> Sales meetings pinpoint which to contact</li>
-                            <li> Sales meetings which to</li>
-                            <li> Meetings which to contact</li>
-                            <li> Sales meetings which to</li>
-                            <li> Meetings which to contact</li>
+                            <li>Sales meetings pinpoint which to contact</li>
+                            <li>Sales meetings which to</li>
+                            <li>Meetings which to contact</li>
+                            <li>Sales meetings which to</li>
+                            <li>Meetings which to contact</li>
                         </ul>
                     </div>
                 </aside>
+
+                {/* Main Blog Content */}
                 <section className="lg:col-span-4">
                     <div className="prose max-w-none prose-lg">
                         <PortableText value={data.content} />
