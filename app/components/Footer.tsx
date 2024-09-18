@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Footer() {
     return (
@@ -8,9 +9,9 @@ function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Logo and Description */}
                     <div className="col-span-1">
-                        <h1 className="text-white text-3xl font-semibold mb-4">
-                            Cx<span className="text-red-600">ful</span>
-                        </h1>
+                        <div className="text-white text-3xl font-semibold mb-4">
+                            <Image src={'/Frame (1).png'} width={67} height={24} />
+                        </div>
                         <p className="text-gray-400 text-sm">
                             Website design & development that interacts & connects with your prospects and customers just like you would do if in your office & store.
                             Design & development that interacts & connects with your prospects and customers just like you would do if in your office & store.

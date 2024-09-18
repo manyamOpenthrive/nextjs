@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
@@ -15,7 +16,7 @@ function Navbar() {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div className="flex flex-1 gap-5 font-medium">
                     <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <span className="self-center text-2xl text-blue-700 font-semibold whitespace-nowrap">Cx<span className="text-red-600">Ful</span></span>
+                        <Image src={'/Frame.png'} width={67} height={24} />
                     </Link>
                     <ul className="hidden md:flex md:space-x-5 font-medium">
                         <li>
@@ -36,8 +37,9 @@ function Navbar() {
                         </li>
                         <li className="hidden md:block">|</li>
                         <li>
-                            <Link href="/" className="flex items-center py-2 px-3 text-gray-900 rounded-lg">
+                            <Link href="/" className="flex items-center py-2 px-3 text-gray-900 rounded-lg ">
                                 Start A Project
+                                <Image src={'/Vector.png'} width={18} height={18} className='pl-1' />
                             </Link>
                         </li>
                     </ul>
