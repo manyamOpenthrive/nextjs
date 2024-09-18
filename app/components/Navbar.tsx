@@ -16,7 +16,7 @@ function Navbar() {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <div className="flex flex-1 gap-5 font-medium">
                     <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <Image src={'/Frame.png'} width={67} height={24} />
+                        <Image src={'/Frame.png'} width={67} height={24} alt='logo' />
                     </Link>
                     <ul className="hidden md:flex md:space-x-5 font-medium">
                         <li>
@@ -39,7 +39,7 @@ function Navbar() {
                         <li>
                             <Link href="/" className="flex items-center py-2 px-3 text-gray-900 rounded-lg ">
                                 Start A Project
-                                <Image src={'/Vector.png'} width={18} height={18} className='pl-1' />
+                                <Image src={'/Vector.png'} width={18} height={18} className='pl-1' alt='vector' />
                             </Link>
                         </li>
                     </ul>

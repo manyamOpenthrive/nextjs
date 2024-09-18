@@ -10,7 +10,7 @@ function Footer() {
                     {/* Logo and Description */}
                     <div className="col-span-1">
                         <div className="text-white text-3xl font-semibold mb-4">
-                            <Image src={'/Frame (1).png'} width={67} height={24} />
+                            <Image src={'/Frame (1).png'} width={67} height={24} alt='logo' />
                         </div>
                         <p className="text-gray-400 text-sm">
                             Website design & development that interacts & connects with your prospects and customers just like you would do if in your office & store.
