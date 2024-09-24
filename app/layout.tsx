@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { VisualEditing } from "next-sanity";
+import { draftMode } from "next/headers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +34,16 @@ export default function RootLayout({
       >
         <Navbar />
         <main>
+          {draftMode().isEnabled && (
+            <a
+              className="fixed right-0 bottom-0 bg-blue-500 text-white p-4 m-4"
+              href="/api/draft-mode/disable"
+            >
+              Disable preview mode
+            </a>
+          )}
           {children}
+          {draftMode().isEnabled && <VisualEditing />}
         </main>
         <Footer />
       </body>

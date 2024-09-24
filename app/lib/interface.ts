@@ -5,19 +5,35 @@ export interface simpleBlogCard {
   title: string;
   smallDescription: string;
   currentSlug: string;
-  titleImage: Image; // Assuming titleImage is a Sanity image object.
+  titleImage: Image; 
 }
 
 export interface card {
-  imageurl: string; // Assuming imageurl is a Sanity image object.
+  imageurl: string; 
   title: string;
   shortdesc: string;
   slug: string;
 }
 
+export interface Author {
+  name: string;
+  image: Image;
+}
+
+export interface BlogSection {
+  _type: 'section';
+  title: string;
+  image?: Image; // Optional image for the section
+  content: PortableTextBlock[]; // Rich text content
+}
+
+export type BlogContent = BlogSection | PortableTextBlock;
+
 export interface fullblog {
   currentSlug: string;
   title: string;
-  content: PortableTextBlock[]; // Assuming content is an array of Portable Text Blocks.
-  titleImage: Image; // Assuming titleImage is a Sanity image object.
+  content: BlogContent[]; // Use the new BlogContent type
+  titleImage: Image;
+  publishedAt: Date;
+  author: { name: string; image: Image | null };
 }
